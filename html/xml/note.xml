@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="note.css"?>
+<note>
+  <to>George</to>
+  <from>John</from>
+  <heading>Reminder</heading>
+  <body>Don't forget the meeting!</body>
+  <doverlee>自定义的标签，测试xml应用css样式！</doverlee>
+  <planets>
+    <planet>Venus</planet>
+    <planet moons="1">Earth</planet>
+    <planet moons="2">Mars</planet>
+  </planets>
+</note>

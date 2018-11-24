@@ -1,0 +1,175 @@
+body{
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+section .filter{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 90px 0;
+}
+
+.navbar-default{
+  background: #fff;
+  border: none;
+  box-shadow: 0 2px 3px rgba(50, 50, 50, 0.25);
+}
+
+.navbar > .container .navbar-brand{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#home{
+  background: url("../../images/home-bg.jpg");
+  background-size: cover;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#home p{
+  font-size: 20px;
+  line-height: 40px;
+}
+
+#home img{
+  margin: 30px auto;
+}
+
+#introduce{
+  margin: 60px auto;
+}
+
+#introduce .col-md-6 h2{
+  font-weight: bold;
+
+}
+
+#introduce .col-md-6 p{
+  line-height: 30px;
+}
+
+#introduce .col-md-6 p span{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #2f89c5;
+  font-size: 15px;
+  background-color: #0f0f0f;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#introduce .col-md-6 img{
+  margin: 30px auto;
+}
+
+#category{
+  background: #f5f5f5;
+  padding: 50px;
+}
+
+#category .col-md-3{
+  margin: 30px auto;
+  text-align: center;
+}
+
+#category .col-md-3:hover{
+  background: #1094FA;
+  box-shadow: 1px 1px 4px #1094FA;
+}
+
+#category .col-md-3 a{
+  text-decoration: none;
+  color: #212121;
+}
+
+#category .col-md-3 img{
+  margin: 10px auto;
+  border-radius: 50%;
+}
+
+#category .col-md-3 h3{
+  font-weight: bold;
+}
+
+#discuss{
+  text-align: center;
+}
+
+#discuss h2{
+  margin: 60px 0 20px 0;
+  font-weight: bold;
+}
+
+#discuss .course{
+  margin: 10% 20%;
+}
+
+#discuss .course a{
+  margin: 20px 0;
+}
+
+#download{
+  margin: 30px auto;
+  background-color: #f5f5f5;
+  padding: 60px;
+}
+
+#download .col-md-6 h3{
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+#download .col-md-6 p{
+  margin: 30px 0;
+}
+
+#download .col-md-6 button{
+  margin-top: 10px;
+}
+
+#contact{
+  background: url("../../images/contact.jpg") no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+}
+
+#contact h3{
+  margin-top: 10px;
+}
+
+#contact p{
+  line-height: 25px;
+}
+
+#contact input{
+  border: none;
+}
+
+#contact input.form-control{
+  height: 50px;
+  margin: 10px 0;
+}
+
+#contact textarea.form-control{
+  margin: 10px 0;
+}
+
+#contact input[type="submit"]{
+  background-color: #337AB7;
+}
+
+#contact input[type="submit"]:hover{
+  background-color: #286090;
+}
+
+footer{
+
+  text-align: center;
+  margin: 20px;
+}

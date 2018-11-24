@@ -1,0 +1,254 @@
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/*导航样式开始*/
+#head {
+  height: 60px;
+  width: 100%;
+  background-color: #0077ca;
+  position: fixed;
+  z-index: 9999;
+}
+
+#head a {
+  color: #ffffff;
+}
+
+#headLogo {
+  width: 270px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+  margin: 0 10px;
+}
+
+#headNav > li {
+  float: left;
+  width: 70px;
+  height: 60px;
+  font-size: 14px;
+  text-align: center;
+}
+
+#headNav > li.hgLine {
+  height: 60px;
+  width: 1px;
+  background: linear-gradient(transparent, #FFFFFF);
+}
+
+#headNav > li > a {
+  display: block;
+  width: 70px;
+  height: 25px;
+  padding: 35px 0 0;
+  background: url("../../images/nav_menu_bg.png") no-repeat;
+}
+
+#headNav > li#menu_1 > a {
+  background-position: center -95px;
+}
+
+#headNav > li#menu_2 > a {
+  background-position: center -195px;
+}
+
+#headNav > li#menu_3 > a {
+  background-position: center -295px;
+}
+
+#headNav > li#menu_4 > a {
+  background-position: center -395px;
+}
+
+#headNav > li.current_menu, #headNav > li.current_menu > a {
+  background-color: #62d2f9;
+  width: 100px;
+}
+
+#headNav > li > a:hover {
+  color: #333333;
+  background-color: #62d2f9;
+}
+
+#headLink {
+  padding: 0 10px;
+  border-left: 1px solid #cccccc;
+}
+
+#headLink > li {
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#headLink > li > a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 25px;
+  background: url("../../images/nav_link_ico.png") no-repeat;
+}
+
+#headLink > li#link_1 > a {
+  background-position: 0 -183px;
+}
+
+#headLink > li#link_2 > a {
+  background-position: 0 -93px;
+}
+
+#headLink > li > a:hover {
+  color: #333333;
+  background-color: #62d2f9;
+}
+
+/*导航样式结束*/
+/*导航或菜单显示与隐藏控制和显示所在菜单模块开始*/
+#navToggle {
+  position: fixed;
+  top: 61px;
+  width: 100%;
+  height: 27px;
+  color: #ffffff;
+  z-index: 9999;
+  border-bottom: #009beb solid 2px;
+  padding-left: 2px;
+}
+
+#navCtl {
+  width: 185px;
+  height: 30px;
+  border-right: #009beb solid 1px;
+}
+
+#navCtl > ul > li {
+  display: inline-block;
+  margin: 3px;
+  background-color: #545454;
+  font-weight: bold;
+  padding: 0 2px;
+  border-radius: 5px;
+}
+
+#navCtl > ul > li:hover {
+  cursor: pointer;
+}
+
+#navShow {
+  height: 27px;
+  color: #0084d3;
+  font-weight: bold;
+}
+
+#navShow > ul > li {
+  float: left;
+  height: 27px;
+  line-height: 27px;
+  color: #0084d3;
+  font-weight: bold;
+}
+
+#navShow > ul > li:first-child {
+  width: 20px;
+  margin: 0 10px;
+  padding: 0 15px;
+  background: url("../../images/icon_home.png") no-repeat 0 7px;
+}
+
+#navShow > ul > li:last-child {
+  padding-left: 5px;
+  border-left: 1px solid #009beb;
+}
+
+#searchCtl {
+  height: 21px;
+  line-height: 21px;
+  margin: 3px 10px;
+  color: #ffffff;
+  background-color: #545454;
+  font-weight: bold;
+  padding: 0 2px;
+  border-radius: 5px;
+}
+
+#searchCtl:hover {
+  cursor: pointer;
+}
+
+/*导航或菜单显示与隐藏控制和显示所在菜单模块结束*/
+/*菜单样式开始*/
+#leftMenu {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 187px;
+  background-color: #EDFBFF;
+  border-right: #009beb solid 1px;
+  border-bottom: #009beb solid 1px;
+  /*background: url("../../images/left_menu_bg.png") repeat-y;*/
+}
+
+.leftMenu > dl > dt {
+  width: 187px;
+  height: 26px;
+  line-height: 26px;
+  text-indent: 10px;
+  background: #009beb url("../../images/toggle_ico_line.png") right 12px no-repeat;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.leftMenu > dl > dt:hover {
+  cursor: pointer;
+}
+
+.leftMenu > dl > dd > ul > li {
+  width: 163px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0 0 0 24px;
+}
+
+.leftMenu > dl > dd > ul > li > a {
+  display: block;
+  width: 163px;
+  height: 26px;
+  line-height: 26px;
+  background: #EDFBFF;
+  color: #333333;
+}
+.leftMenu > dl > dd > ul > li > a.beSelected {
+  font-weight: bold;
+  background-color: #62d2f9;
+}
+
+.leftMenu > dl > dd > ul > li > a:hover {
+  font-weight: bold;
+  background-color: #62d2f9;
+  /*border-top: 1px solid #b8c8d2;*/
+  /*border-left: 1px solid #b8c8d2;*/
+  /*border-bottom: 1px solid #b8c8d2;*/
+}
+
+/*菜单样式结束*/
+/*主体内容样式开始*/
+#mainContent {
+  position: absolute;
+  top: 90px;
+  left: 188px;
+  bottom: 0;
+  right: 0;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+}
+
+/*主体内容样式结束*/
+/*底部样式开始*/
+
+/*底部样式结束*/
+

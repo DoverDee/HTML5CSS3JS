@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Knockout Demo</title>
+    <link rel="stylesheet" type="text/css" href="../../plugins/knockout/knockout.css"/>
+    <link rel="stylesheet" type="text/css" href="../../plugins/knockout/banks.css"/>
+    <style>
+        #content {
+            padding: 16px;
+        }
+        .errors {
+            color: red;
+        }
+    </style>
+
+</head>
+<body>
+<div id="content">
+    <!--userName:<input type="text" id="useNameText" value="inputValue" data-bind="value:UserName"/>
+    <p>
+        hello <b id="userNameView" data-bind="html:UserName">inputValue</b>
+    </p>
+    <p>
+        hello <b id="userNameAgainView" data-bind="html:UserName">inputValue</b> again
+    </p>
+    <p><input type="hidden" id="useHidden" data-bind="value:UserName"/></p>-->
+
+    <!--<select name="userName" id="userNameList" data-bind="options:userNames,optionsText:'key',optionsValue:'value',selectedOptions:selectedUserName"></select>
+    <a id="showUserName" href="#">显示</a>
+    <b id="selectedValue" data-bind="html:selectedUserName"></b>-->
+
+    <!--<table border="2px">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>英文名</th>
+            <th>中文名</th>
+            <th>描述</th>
+        </tr>
+        </thead>
+        <tbody id="tableBody" data-bind="foreach:Planets">
+        <tr>
+            <td data-bind="html:($index() + 1)"></td>
+            <td data-bind="html:englishName"></td>
+            <td data-bind="html:(chineseName == '地球' ? chineseName+'<b>[家]</b>': chineseName)"></td>
+            <td data-bind="html:description"></td>
+        </tr>
+        </tbody>
+    </table>
+    <a href="#" data-bind="click:addPlanet">添加</a>-->
+
+    <!--Year:<input type="text" data-bind="value:Year">
+    Month:<input type="text" data-bind="value:Month">
+    Day:<input type="text" data-bind="value:Day">
+    Date:<span data-bind="html:Year()+'年'+Month()+'月'+Day()+'日'"></span>
+    <input type="text" data-bind="value:Date">-->
+
+    <!--<p id="showCount" data-bind="html:Count,style:{color:CountColor},visible:(Count()<10)">0</p>
+    <button id="countButton" data-bind="event:{click:Counter,mouseover:CounterOver,mouseout:CounterOut}">计数</button>-->
+
+    <!--<input type="text" data-bind="value:MessageText"><input type="button" data-bind="click:Send" value="发送">
+    <ul data-bind="foreach:MessageList">
+        <li><b data-bind="html:message"></b>&#45;&#45;<b data-bind="html:account"></b></li>
+    </ul>-->
+
+    <!--<div data-bind="component:'MessageAndList'"></div>
+    <div data-bind="component:{name:'MessageAndList',params:'Jerry'}"></div>-->
+
+    <!--<form data-bind="submit:SubmitForm">
+        <div>
+            <lable for="userName">姓名：</lable>
+            <input type="text" data-bind="value:Name">
+        </div>
+        <div>
+            <lable>邮箱：</lable>
+            <input type="text" data-bind="value:Email">
+        </div>
+        <div>
+            <lable>地址：</lable>
+            <select data-bind="value:Province,options:ProvinceList,optionsText:'name',optionsValue:'provinceCode',optionsCaption:'请选择省份'"></select>
+            <select data-bind="value:City,options:CurrentCityList,optionsText:'name',optionsValue:'cityCode',optionsCaption:'请选择城市'"></select>
+            <select data-bind="value:County,options:CurrentCountyList,optionsText:'name',optionsValue:'countyCode',optionsCaption:'请选择县/区'"></select>
+        </div>
+        <div>
+            <lable>爱好：</lable>
+            <select multiple="multiple"
+                    data-bind="options:Hobbies,selectedOptions:MyHobby,validationCore:MyHobby"></select>
+            <b data-bind="html:MyHobby"></b>
+        </div>
+        <input type="submit" value="提交"/>
+        <div class="errors">
+            <p data-bind="validationMessage:Name"></p>
+            <p data-bind="validationMessage:Email"></p>
+        </div>
+    </form>-->
+
+
+        <div class="bankList">
+            <ul>
+                <div data-bind="foreach:BankList">
+                    <li data-bind="event:{'click':$root.ChooseThisCard,'mouseover':$root.ShowCardSupport,'mouseout':$root.HideCardSupport},attr:{'class':'bank_'+Detail.ClassName}">
+                        <div class="pf" data-bind="html:'支持：'+( Detail.Support == 11 ? '储蓄卡　信用卡' :  '储蓄卡' ), attr:{'class':(Selected()||Hover() ? 'supportCardShow' :'panelHide' ) }"></div>
+                    </li>
+                </div>
+                <li class="bank_more" data-bind="click:BankMore">更多银行</li>
+                <div class="clr"></div>
+            </ul>
+        </div>
+        <div>
+            选中的银行：<b data-bind="html: SelectedBank().Detail.Name"></b>
+        </div>
+
+
+        <!--<div id="viewModel" data-model="viewModel">
+            点击选择银行：<b data-bind="click:ShowBankList">选择</b>
+            <span style="color: blue;" data-bind="html:SelectedBank"></span>
+        </div>
+        <div id="viewModelBankList" data-model="viewModelBankList">
+            <div data-bind="visible:ModelVisible">
+                <select data-bind="options:BankList,value:SelectedBank"></select>
+            </div>
+        </div>-->
+
+    </div>
+    <script type='text/javascript' src="../../plugins/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../../plugins/knockout/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="../../plugins/knockout/jquery.livequery-1.3.6.js"></script>
+    <script type="text/javascript" src="../../plugins/knockout/knockout.multimodels-0.1.min.js"></script>
+    <!--<script type="text/javascript" src="js/knockout.validation.min.js"></script>-->
+    <script>
+        $(document).ready(function () {
+
+            var ViewModel = function () {
+                var self = this;
+                self.SelectedBank = ko.observable("");
+                self.ShowBankList = function () {
+                    currentViewModelBankList.Init(self.SelectedBank);
+                };
+            };
+            var ViewModelBankList = function () {
+                var self = this;
+                self.ModelVisible = ko.observable(false);
+                self.BankList = ko.observableArray(['中国人民银行','民生银行','天线无影']);
+                self.SelectedBank = ko.observable("");
+                self.Init = function (message) {
+                    self.SelectedBank = message;
+                    self.ModelVisible(true);
+                }
+            };
+            var currentViewModel = new ViewModel();
+            ko.attach("viewModel", currentViewModel);
+            var currentViewModelBankList = new ViewModelBankList();
+            ko.attach("viewModelBankList", currentViewModelBankList);
+
+            var BankList = [{Id: 1, BankCode: "A3115", Name: "中国工商银行", ClassName: "gs", BankId: "ICBCB2C", Support: 11, Selected: false},
+                {Id: 2, BankCode: 'A3115', Name: '中国建设银行', ClassName: 'js', BankId: 'CCB', Support: 11, Selected: false},//建行
+                {Id: 3, BankCode: 'A3115', Name: '招商银行', ClassName: 'zs', BankId: 'CMB', Support: 11, Selected: false},//招行
+                {Id: 4, BankCode: 'A3115', Name: '中国农业银行', ClassName: 'ny', BankId: 'ABC', Support: 11, Selected: false},//农行
+                {Id: 5, BankCode: 'A3115', Name: '交通银行', ClassName: 'jt', BankId: 'COMM-DEBIT', Support: 10, Selected: false},//交行
+                {Id: 6, BankCode: 'A3115', Name: '广东发展银行', ClassName: 'gf', BankId: 'GDB', Support: 11, Selected: false},//广发
+                {Id: 7, BankCode: 'A3115', Name: '中国银行', ClassName: 'zg', BankId: 'BOCB2C', Support: 11, Selected: false},//中国银行
+                {Id: 8, BankCode: 'A3115', Name: '中国民生银行', ClassName: 'ms', BankId: 'CMBC', Support: 10, Selected: false},//民生银行
+                {Id: 9, BankCode: 'A3115', Name: '平安银行', ClassName: 'pa', BankId: 'SPABANK', Support: 11, Selected: false},//平安银行
+                {Id: 10, BankCode: 'A3115', Name: '兴业银行', ClassName: 'xy', BankId: 'CIB', Support: 11, Selected: false},//兴业银行
+                {Id: 12, BankCode: 'A3115', Name: '中国邮政储蓄银行', ClassName: 'cx', BankId: 'POSTGC', Support: 11, Selected: false},//邮政储蓄
+                {Id: 13, BankCode: 'A3115', Name: '中国光大银行', ClassName: 'gd', BankId: 'CEB-DEBIT', Support: 10, Selected: false},//光大银行
+                {Id: 14, BankCode: 'A3115', Name: '上海银行', ClassName: 'sh', BankId: 'SHBANK', Support: 11, Selected: false},//上海银行
+                {Id: 15, BankCode: 'A3115', Name: '上海浦东发展银行', ClassName: 'pf', BankId: 'SPDB', Support: 11, Selected: false},//浦东发展银行
+                {Id: 16, BankCode: 'A3115', Name: '上海农商银行', ClassName: 'shns', BankId: 'SHRCB', Support: 10, Selected: false},//上海农商银行
+                {Id: 17, BankCode: 'A3115', Name: '北京银行', ClassName: 'bj', BankId: 'BJBANK', Support: 11, Selected: false},//北京银行
+                {Id: 18, BankCode: 'A3115', Name: '北京农商银行', ClassName: 'bjns', BankId: 'BJRCB', Support: 10, Selected: false},//北京农商银行
+                {Id: 19, BankCode: 'A3114', Name: '南京银行', ClassName: 'nj', BankId: 'NJCB', Support: 10, Selected: false},//南京银行
+                {Id: 20, BankCode: 'A3115', Name: '宁波银行', ClassName: 'nb', BankId: 'NBBANK', Support: 11, Selected: false},//宁波银行
+                {Id: 21, BankCode: 'A3115', Name: '杭州银行', ClassName: 'hz', BankId: 'HZCBB2C', Support: 11, Selected: false},//杭州银行
+                {Id: 22, BankCode: 'A3115', Name: '温州银行', ClassName: 'wz', BankId: 'WZCBB2C-DEBIT', Support: 11, Selected: false},//温州银行
+                {Id: 23, BankCode: 'A3114', Name: '东亚银行', ClassName: 'dy', BankId: 'BEA', Support: 11, Selected: false},//东亚银行
+                {Id: 24, BankCode: 'A3115', Name: '富滇银行', ClassName: 'fz', BankId: 'FDB', Support: 11, Selected: false}];//富滇银行
+
+            var BankEntity = function (bankDetail) {
+                var self = this;
+                self.Detail = bankDetail;
+                self.Selected = ko.observable(bankDetail.Selected);
+                self.Hover = ko.observable(false);
+            };
+
+            var ViewModel = function () {
+                var self = this;
+                self.MappedBankList = function () {
+                    var list = new Array();
+                    for (var i = 0; i < 9; i++) {
+                        list.push(new BankEntity(BankList[i]));
+                    }
+                    return list;
+                };
+                self.BankList = ko.observableArray(self.MappedBankList());
+                self.ChooseThisCard = function (item) {
+                    var list = self.BankList();
+                    for(var i=0;i<self.BankList().length;i++){
+                        //清除之前选中的银行
+                        list[i].Selected(false);
+                    }
+                    item.Selected(true);
+                };
+                self.ShowCardSupport = function (item) {
+                    item.Hover(true);
+                };
+                self.HideCardSupport = function (item) {
+                    item.Hover(false);
+                };
+                self.SelectedBank = ko.computed(function () {
+                    var selectedBanks = ko.utils.arrayFilter(self.BankList(), function (bank) {
+                        return bank.Selected() == true;
+                    });
+                    if (selectedBanks.length > 0) {
+                        console.log(selectedBanks[0]);
+                        return selectedBanks[0];
+                    } else {
+                        return new BankEntity({});
+                    }
+                }, self);
+                self.BankMore = function () {
+                    self.BankList.removeAll();
+                    for (var i = 0, count = BankList.length; i < count; i++) {
+                        self.BankList.push(new BankEntity(BankList[i]));
+                    }
+                    return false;
+                }
+            };
+
+            var currentViewModel = new ViewModel();
+            ko.applyBindings(currentViewModel);
+
+
+            /*ko.validation.configure({
+             registerExtenders: true,
+             insertMessages: true,
+             //insertMessages: false,
+             errorClass: "errors"
+             });
+
+             var ViewModel = function () {
+             var self = this;
+             self.Name = ko.observable().extend({required: {message: "请输入用户名！"}});
+             self.Email = ko.observable().extend({required: {message: "请输入邮箱！"}})
+             .extend({
+             pattern: {
+             message: '请输入正确的邮箱!',
+             params: '([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$'
+             }
+             });
+             self.Province = ko.observable().extend({required: {message: "请选择省份！"}});
+             self.City = ko.observable().extend({required: {message: "请选择城市！"}});
+             self.County = ko.observable().extend({required: {message: "请选择县/区！"}});
+             self.ProvinceList = ko.observableArray([
+             {name: "安徽省", provinceCode: "34"},
+             {name: "湖北省", provinceCode: "42"}
+             ]);
+             self.CityList = ko.observableArray([
+             {name: "合肥市", cityCode: "3401", provinceCode: "34"},
+             {name: "蚌埠市", cityCode: "3403", provinceCode: "34"},
+             {name: "芜湖市", cityCode: "3402", provinceCode: "34"},
+             {name: "淮南市", cityCode: "3404", provinceCode: "34"},
+             {name: "武汉市", cityCode: "4201", provinceCode: "42"},
+             {name: "随州市", cityCode: "4202", provinceCode: "42"},
+             {name: "襄阳市", cityCode: "4203", provinceCode: "42"}
+             ]);
+             self.CountyList = ko.observableArray([
+             {name: "固镇县", countyCode: "340301", cityCode: "3403"},
+             {name: "五河县", countyCode: "340302", cityCode: "3403"},
+             {name: "怀远县", countyCode: "340303", cityCode: "3403"},
+             {name: "武昌区", countyCode: "420101", cityCode: "4201"},
+             {name: "汉口区", countyCode: "420102", cityCode: "4201"},
+             {name: "汉阳区", countyCode: "420103", cityCode: "4201"},
+             {name: "洪山区", countyCode: "420104", cityCode: "4201"}
+             ]);
+             self.CurrentCityList = ko.computed(function () {
+             return ko.utils.arrayFilter(self.CityList(), function (cityList) {
+             return cityList.provinceCode == self.Province();
+             });
+             }, self);
+             self.CurrentCountyList = ko.computed(function () {
+             return ko.utils.arrayFilter(self.CountyList(), function (countyList) {
+             return countyList.cityCode == self.City();
+             });
+             }, self);
+             self.Hobbies = ko.observableArray([
+             "游泳", "打球", "跑步"
+             ]);
+             self.MyHobby = ko.observable().extend({required: {message: "请选择爱好！"}});
+             self.SubmitForm = function () {
+             if (self.errors().length > 0) {
+             self.errors.showAllMessages();
+             return false;
+             } else {
+             return true;
+             }
+             }
+             };
+
+             var currentViewModel = new ViewModel();
+             currentViewModel.errors = ko.validation.group(currentViewModel);
+             //ko.validation.makeBindingHandlerValidatable('selectedOptions');
+             ko.applyBindings(currentViewModel);*/
+
+            /*ko.components.register(
+             'MessageAndList',{
+             viewModel:function (params) {
+             var self = this;
+             self.Account = ko.observable(params!=null?params:"Tom");
+             self.MessageText = ko.observable("");
+             self.Send = function () {
+             self.MessageList.push({message:self.MessageText(),account:self.Account()});
+             self.MessageText("");
+             };
+             self.MessageList = ko.observableArray([]);
+             },
+             template:'<input type="text" data-bind="value:MessageText"><input type="button" data-bind="click:Send" value="发送">' +
+             '<ul data-bind="foreach:MessageList">' +
+             '<li><b data-bind="html:message"></b>,<mark data-bind="html:account"></mark></li>' +
+             '</ul>'
+             }
+             );
+             ko.applyBindings();*/
+
+            /*var ViewModel = function () {
+             var self = this;
+             self.Count = ko.observable(0);
+             self.Counter = function () {
+             var ct = self.Count();
+             ct = ct+1;
+             self.Count(ct);
+             if(ct>=10){
+             alert("你点击的次数过多！");
+             //$("#showCount").hide();
+             return false;
+             }
+             };
+             self.CountColor = ko.observable("black");
+             self.CounterOver = function () {
+             self.CountColor("red");
+             };
+             self.CounterOut = function () {
+             self.CountColor("black");
+             }
+             };
+             var currentViewModel = new ViewModel();
+             ko.applyBindings(currentViewModel);*/
+
+            /*var counter = 0;
+             $("#countButton").bind("click",function () {
+             counter = counter +1;
+             $("#showCount").html(counter);
+             });*/
+
+            /*var ViewModel = function () {
+             var self = this;
+             self.Year = ko.observable("");
+             self.Month = ko.observable("");
+             self.Day = ko.observable("");
+             self.Date = ko.computed(function() {
+             return self.Year()+'年'+self.Month()+'月'+self.Day()+'日';
+             },self);
+             self.Date = ko.pureComputed({
+             write:function (value) {
+             var indexOfYear =  value.indexOf("年");
+             var indexOfMonth =  value.indexOf("月");
+             var indexOfDay =  value.indexOf("日");
+             var year = value.substring(0,indexOfYear);
+             if(!/^\d{4}$/.test(year)){
+             alert("请输入4位合法的年份阿拉伯数字！");
+             return false;
+             }
+             self.Year(year);
+             var month = value.substring(indexOfYear+1,indexOfMonth);
+             if(!/^[0-1][0-2]|[0][0-9]$/.test(month)){
+             alert("请输入2位合法的月份阿拉伯数字！");
+             return false;
+             }
+             self.Month(month);
+             var day = value.substring(indexOfMonth+1,indexOfDay);
+             if(!/^[0-3][0-9]$/.test(day)){
+             alert("请输入2位合法的日期阿拉伯数字！");
+             return false;
+             }
+             self.Day(day);
+             },
+             read:function () {
+             return self.Year()+'年'+self.Month()+'月'+self.Day()+'日';
+             },
+             owner: self
+             })
+
+             };
+             var currentViewModel = new ViewModel();
+             ko.applyBindings(currentViewModel);*/
+
+            /*var  Planets = [
+             {id:1,englishName:"Mercury",chineseName:"水星",description:"离太阳最近的一颗行星"},
+             {id:2,englishName:"Venus",chineseName:"金星",description:"拥有非常厚的大气层的一颗行星"},
+             {id:3,englishName:"Earth",chineseName:"地球",description:"我们的家园"},
+             {id:4,englishName:"Mars",chineseName:"火星",description:"一颗红色的星球"},
+             {id:5,englishName:"Jupiter",chineseName:"木星",description:"太阳系最大的行星"},
+             {id:6,englishName:"Saturn",chineseName:"土星",description:"拥有最美丽光环的行星"},
+             {id:7,englishName:"Uranus",chineseName:"天王星",description:"内核是个巨大的海洋（8000千米）"},
+             {id:8,englishName:"Neptune",chineseName:"海王星",description:"一颗优雅的淡蓝色行星"},
+             {id:9,englishName:"Pluto",chineseName:"冥王星",description:"曾经是行星的行星"}
+             ];
+
+             function RenderPlanets(){
+             var tableBody = $("#tableBody");
+             var planetsTr = "";
+             for(var i in Planets){
+             planetsTr += "<tr>";
+             planetsTr += "<td>"+Planets[i].id+"</td>";
+             planetsTr += "<td>"+Planets[i].englishName+"</td>";
+             planetsTr += "<td>"+Planets[i].chineseName+"</td>";
+             planetsTr += "<td>"+Planets[i].description+"</td>";
+             planetsTr += "</tr>";
+             }
+             tableBody.html(planetsTr);
+             }
+             //RenderPlanets();
+             var ViewModel = function () {
+             var self = this;
+             self.Planets = ko.observableArray(Planets);
+             self.addPlanet = function(){
+             self.Planets.push({id:10,englishName:"unknow",chineseName:"未知行星",description:"等待人类去发现"});
+             return false;
+             }
+             };
+             var currentViewModel = new ViewModel();
+             ko.applyBindings(currentViewModel);*/
+
+
+            /*
+             //knockout实现
+             var ViewModel = function () {
+             var self = this;
+             self.userNames = ko.observable([{key:"joy",value:"1"},{key:"tom",value:"2"},{key:"lily",value:"3"}]);
+             self.selectedUserName = ko.observable();
+             }
+             var currentViewModel = new ViewModel();
+             ko.applyBindings(currentViewModel);
+
+             //传统js实现
+             function RenderSelectOptions(datas, userListNode) {
+             var optionStr = "";
+             for(var i in datas){
+             optionStr += "<option value='"+ datas[i]+"'>"+datas[i]+"</option>";
+             }
+             userListNode.html(optionStr);
+             }
+
+             var userNames = ["joy","tom","lily"];
+             RenderSelectOptions(userNames,$("#userNameList"));
+
+             $("#showUserName").click(function () {
+             $("#selectedValue").html($("#userNameList").val());
+             });*/
+
+
+            /*
+             //knockout实现
+             var  ViewModel = function(){
+             var self = this;
+             self.UserName = ko.observable("inputValue");
+             }
+
+             var  currentViewModel = new  ViewModel();
+             ko.applyBindings(currentViewModel);
+
+             //传统js实现
+             var useNameText = $("#useNameText");
+             var userNameView = $("#userNameView");
+             var userNameAgainView = $("#userNameAgainView");
+             useNameText.bind("change", function () {
+             var userName = $(this).val();
+             userNameView.html(userName);
+             userNameAgainView.html(userName);
+             });
+             */
+        });
+    </script>
+</div>
+</body>
+</html>

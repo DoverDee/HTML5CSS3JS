@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <link rel="stylesheet" href="../../css/jrs/common.css">
+  <link rel="stylesheet" href="../../css/jrs/main.css">
+  <style>
+    /**/
+  </style>
+</head>
+<body>
+<div id="head"><!--begin head-->
+  <div id="headLogo" class="left"><a href="#">H5&Original CSS&jQuery</a></div>
+  <ul id="headNav" class="left">
+    <li class="forSelect hgLine" style="visibility: hidden"></li>
+    <li id="menu_1" class="current_menu"><a href="#">常规管理</a></li>
+    <li class="forSelect hgLine" style="visibility: hidden"></li>
+    <li id="menu_2"><a href="#">模块管理</a></li>
+    <li class="forSelect hgLine"></li>
+    <li id="menu_3"><a href="#">系统管理</a></li>
+    <li class="forSelect hgLine"></li>
+    <li id="menu_4"><a href="#">扩展管理</a></li>
+    <li class="forSelect hgLine"></li>
+  </ul>
+  <ul id="headLink" class="right">
+    <li id="link_1"><a href="#">帮助</a></li>
+    <li id="link_2"><a href="#">退出</a></li>
+  </ul>
+</div><!--end head-->
+<div id="content"><!--begin content-->
+  <div id="navToggle">
+    <div id="navCtl" class="left">
+      <ul>
+        <li>隐藏导航</li>
+        <li>隐藏菜单</li>
+        <li>全部隐藏</li>
+      </ul>
+    </div>
+    <div id="navShow" class="left">
+      <ul>
+        <li id="home"><a href="main.html">HOME</a></li>
+        <li id="position">系统默认首页</li>
+      </ul>
+    </div>
+    <div id="searchCtl" class="right" style="display: none">隐藏条件</div>
+  </div>
+  <div id="leftMenu">
+    <div id="leftMenu_1" class="leftMenu"><!--begin leftMenu_1-->
+      <dl>
+        <dt>栏目管理</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:" data-bind="category.html">栏目管理</a></li>
+            <li><a href="javascript:">哦哦管理</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>内容管理</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:" data-bind="introduce.html">公司介绍</a></li>
+            <li><a href="javascript:">产品介绍</a></li>
+            <li><a href="javascript:">新闻中心</a></li>
+            <li><a href="javascript:">公司相册</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>快捷面板1</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">广告管理</a></li>
+            <li><a href="javascript:">公告管理</a></li>
+            <li><a href="javascript:">友情链接</a></li>
+            <li><a href="javascript:">留言板管理</a></li>
+            <li><a href="javascript:">欧克</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div><!--end leftMenu_1-->
+    <div id="leftMenu_2" class="leftMenu" style="display: none;"><!--begin leftMenu_1-->
+      <dl>
+        <dt>栏目管理2</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">栏目管理</a></li>
+            <li><a href="javascript:">哦哦管理</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>内容管理2</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">公司介绍</a></li>
+            <li><a href="javascript:">产品介绍</a></li>
+            <li><a href="javascript:">新闻中心</a></li>
+            <li><a href="javascript:">公司相册</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>快捷面板2</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">广告管理</a></li>
+            <li><a href="javascript:">公告管理</a></li>
+            <li><a href="javascript:">友情链接</a></li>
+            <li><a href="javascript:">留言板管理</a></li>
+            <li><a href="javascript:">欧克</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div><!--end leftMenu_1-->
+    <div id="leftMenu_3" class="leftMenu" style="display: none;"><!--begin leftMenu_1-->
+      <dl>
+        <dt>系统管理</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:" data-bind="netReset.html">系统配置</a></li>
+            <li><a href="javascript:">哦哦管理</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>内容管理3</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">公司介绍</a></li>
+            <li><a href="javascript:">产品介绍</a></li>
+            <li><a href="javascript:">新闻中心</a></li>
+            <li><a href="javascript:">公司相册</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>快捷面板3</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">广告管理</a></li>
+            <li><a href="javascript:">公告管理</a></li>
+            <li><a href="javascript:">友情链接</a></li>
+            <li><a href="javascript:">留言板管理</a></li>
+            <li><a href="javascript:">欧克</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div><!--end leftMenu_1-->
+    <div id="leftMenu_4" class="leftMenu" style="display: none;"><!--begin leftMenu_1-->
+      <dl>
+        <dt>栏目管理4</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">栏目管理</a></li>
+            <li><a href="javascript:">哦哦管理</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>内容管理4</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">公司介绍</a></li>
+            <li><a href="javascript:">产品介绍</a></li>
+            <li><a href="javascript:">新闻中心</a></li>
+            <li><a href="javascript:">公司相册</a></li>
+          </ul>
+        </dd>
+      </dl>
+      <dl>
+        <dt>快捷面板4</dt>
+        <dd>
+          <ul>
+            <li><a href="javascript:">广告管理</a></li>
+            <li><a href="javascript:">公告管理</a></li>
+            <li><a href="javascript:">友情链接</a></li>
+            <li><a href="javascript:">留言板管理</a></li>
+            <li><a href="javascript:">欧克</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div><!--end leftMenu_1-->
+  </div>
+  <div id="mainContent">
+    <!--<iframe id="main" name="main" src="default.html" frameborder="0"></iframe>-->
+    <!--<iframe id="main" name="main" src="category.html" frameborder="0"></iframe>-->
+    <iframe id="main" name="main" src="default.html" frameborder="0"></iframe>
+  </div>
+</div><!--end content-->
+<div id="foot"><!--begin foot-->
+</div><!--end foot-->
+<script type="text/javascript" src="../../plugins/jquery-3.2.1.js"></script>
+<script>
+  $(function(){
+    /*导航点击*/
+    $("#headNav>li").click(function(){
+      $(this).addClass("current_menu").siblings().removeClass("current_menu");
+      $(this).siblings(".forSelect").css("visibility", "visible");
+      $(this).next().css("visibility", "hidden").end().prev().css("visibility", "hidden");
+      var _index = $(this).index() / 2;
+      $("#leftMenu").children(".leftMenu").eq(parseInt(_index)).css("display", "block").siblings().css("display", "none");
+    });
+    /*菜单标题点击*/
+    $("#leftMenu dl>dt").click(function(){
+      $(this).next().slideToggle("fast", function(){
+        if($(this).is(":visible")){
+          $(this).prev().css("background-position", "right 12px");
+        }else{
+          $(this).prev().css("background-position", "right -40px");
+        }
+      });
+    });
+    /*菜单项被点击*/
+    $(".leftMenu>dl>dd>ul>li>a").click(function(){
+      $(".leftMenu>dl>dd a").removeClass("beSelected");
+      $(this).addClass("beSelected");
+      $("#main").attr("src", $(this).attr("data-bind"));
+    });
+    /*导航隐藏与显示*/
+    $("#navCtl").find("li:first").click(function(){
+      var $navToggle = $("#navToggle");
+      var $navCtl = $("#navCtl");
+      var $head = $("#head");
+      var $leftMenu = $("#leftMenu");
+      var $mainContent = $("#mainContent");
+      if($(this).text() === "隐藏导航"){
+        $head.css("display", "none");
+        $(this).html("显示导航");
+        $navToggle.css("top", "0");
+        $leftMenu.css("top", "30px");
+        $mainContent.css("top", "30px");
+        if(!$leftMenu.is(":visible")){
+          $navCtl.find("li:last").html("全部显示");
+        }
+      }else{
+        $head.css("display", "block");
+        $(this).html("隐藏导航");
+        $navToggle.css("top", "61px");
+        $leftMenu.css("top", "90px");
+        $mainContent.css("top", "90px");
+        if($leftMenu.is(":visible")){
+          $navCtl.find("li:last").html("全部隐藏");
+        }
+      }
+    });
+    /*菜单隐藏与显示*/
+    $("#navCtl").find("li").eq(1).click(function(){
+      var $navCrl = $("#navCtl");
+      var $head = $("#head");
+      var $leftMenu = $("#leftMenu");
+      var $mainContent = $("#mainContent");
+      if($(this).text() === "隐藏菜单"){
+        $leftMenu.css("display", "none");
+        $(this).html("显示菜单");
+        $mainContent.css("left", "0");
+        if(!$head.is(":visible")){
+          $navCrl.find("li:last").html("全部显示");
+        }
+      }else{
+        $leftMenu.css("display", "block");
+        $(this).html("隐藏菜单");
+        $mainContent.css("left", "188px");
+        if($head.is(":visible")){
+          $navCrl.find("li:last").html("全部隐藏");
+        }
+      }
+    });
+    /*全部隐藏与显示*/
+    $("#navCtl").find("li:last").click(function(){
+      var $navToggle = $("#navToggle");
+      var $navCrl = $("#navCtl");
+      var $head = $("#head");
+      var $leftMenu = $("#leftMenu");
+      var $mainContent = $("#mainContent");
+      if($(this).text() === "全部隐藏"){
+        $head.css("display", "none");
+        $leftMenu.css("display", "none");
+        $navToggle.css("top", "0");
+        $leftMenu.css("top", "30px");
+        $mainContent.css({"top": "30px", "left": "0"});
+        $(this).html("全部显示");
+        $navCrl.find("li:first").html("显示导航");
+        $navCrl.find("li").eq(1).html("显示菜单");
+      }else{
+        $head.css("display", "block");
+        $leftMenu.css("display", "block");
+        $navToggle.css("top", "61px");
+        $leftMenu.css("top", "90px");
+        $mainContent.css({"top": "90px", "left": "188px"});
+        $(this).html("全部隐藏");
+        $navCrl.find("li:first").html("隐藏导航");
+        $navCrl.find("li").eq(1).html("隐藏菜单");
+      }
+    });
+    /*查询面板的隐藏与显示--获取嵌套html内部的元素--*/
+    $("#searchCtl").click(function(){
+      $("#main").contents().find("#searchWrapper").slideToggle("slow");
+    });
+  });
+</script>
+</body>
+</html>

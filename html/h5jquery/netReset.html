@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>网站设置</title>
+  <link rel="stylesheet" href="../../css/jrs/common.css">
+  <link rel="stylesheet" href="../../css/jrs/main.css">
+  <style>
+    #iTab {
+      margin: 5px 10px;
+    }
+
+    #tabTitle {
+      width: 100%;
+      height: 30px;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    #tabTitle > ul > li {
+      display: inline-block;
+      width: 60px;
+      height: 25px;
+      line-height: 25px;
+      font-size: 14px;
+      font-weight: bold;
+      float: left;
+      background-color: #eeeeee;
+      margin: 2px 2px;
+      padding: 2px;
+    }
+
+    #tabTitle > ul > li.beSelected {
+      background-color: #62D2F9;
+    }
+
+    #tabTitle > ul > li > a {
+      color: #000000;
+    }
+
+    #tabContent div.itc > dl {
+      clear: both;
+      height: 26px;
+      margin: 10px 0;
+    }
+
+    #tabContent div.itc > dl > dt {
+      float: left;
+      width: 120px;
+      font-weight: bolder;
+    }
+
+    #tabContent div.itc > dl > dd {
+      float: left;
+    }
+
+    #tabContent div.itc > dl > dd input {
+      width: 250px;
+    }
+
+    #tabContent div.itc > dl > dd span {
+      display: inline-block;
+      float: left;
+      width: 40px;
+    }
+
+    #tabContent div.itc > dl > dd span input {
+      display: inline-block;
+      float: left;
+      width: 10px;
+
+    }
+
+    #tabContent div.itc > dl > dd .btn {
+      padding: 5px 10px;
+      font-weight: bolder;
+      background-color: #00a0e9;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+<div id="netReset">
+  <div id="iTab">
+    <div id="tabTitle">
+      <ul>
+        <li class="beSelected"><a href="javascript:">站点配置</a></li>
+        <li><a href="javascript:">核心配置</a></li>
+        <li><a href="javascript:">邮箱配置</a></li>
+        <li><a href="javascript:">上传配置</a></li>
+        <li><a href="javascript:">会员配置</a></li>
+        <li><a href="javascript:">其他配置</a></li>
+      </ul>
+    </div>
+    <div id="tabContent" class="clear">
+      <!--站点配置开始-->
+      <div class="itc zdpz">
+        <dl>
+          <dt>网站名称：</dt>
+          <dd>
+            <input title="" type="text" value="我的网站"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>网站域名：</dt>
+          <dd>
+            <input title="" type="text" value="http://www.yxxme.com"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>网站标题：</dt>
+          <dd>
+            <input title="" type="text" value="我的网站"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>站点关键词：</dt>
+          <dd>
+            <input title="" type="text" value="我的网站"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>站点关描述：</dt>
+          <dd>
+            <input title="" type="text" value="我的网站"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>模板风格：</dt>
+          <dd>
+            <select title="" name="mbfg">
+              <option value="1">blog</option>
+              <option value="2" selected="selected">default</option>
+            </select>
+          </dd>
+        </dl>
+        <dl>
+          <dt>Cookie加密码：</dt>
+          <dd>
+            <input title="" type="text" value="EmiNaTl9c"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>网站版权信息：</dt>
+          <dd>
+            <textarea title="" class="textarea-default" rows="3" cols="80">Copyright © 2014-2014 XXXX 版权所有</textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt>网站统计：</dt>
+          <dd>
+            <textarea title="" class="textarea-default" rows="5" cols="80"></textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt>网站备案号：</dt>
+          <dd>
+            <input title="" type="text" value=""/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>联系地址：</dt>
+          <dd>
+            <input title="" type="text" value="昆明北京路"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>联系电话：</dt>
+          <dd>
+            <input title="" type="text" value="0871-66666"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>保存按钮：</dt>
+          <dd>
+            <a href="javascript:" class="btn btn-blue">保存</a>
+          </dd>
+        </dl>
+      </div>
+      <!--站点配置结束-->
+      <!--核心配置开始-->
+      <div class="itc hxpz" style="display: none;">
+        <dl>
+          <dt>关闭网站：</dt>
+          <dd>
+            <span><input name="closeNet" title="closeNet" type="radio" value="1"/>是</span>
+            <span><input name="closeNet" title="closeNet" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>关站提示：</dt>
+          <dd>
+            <textarea title="" class="textarea-default" rows="5" cols="80">站点维护中，请稍等一会...</textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt>禁用语言：</dt>
+          <dd>
+            <textarea title="" class="textarea-default" rows="3" cols="80">艾滋病|中国共产党|111111111</textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt>允许匿名评论：</dt>
+          <dd>
+            <span><input name="anyComment" title="anyComment" type="radio" value="1" checked="checked"/>是</span>
+            <span><input name="anyComment" title="anyComment" type="radio" value="2"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>开启注册验证码：</dt>
+          <dd>
+            <span><input name="signValidate" title="signValidate" type="radio" value="1"/>是</span>
+            <span><input name="signValidate" title="signValidate" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>开启登录验证码：</dt>
+          <dd>
+            <span><input name="loginValidate" title="loginValidate" type="radio" value="1"/>是</span>
+            <span><input name="loginValidate" title="loginValidate" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>开启留言板验证码：</dt>
+          <dd>
+            <span><input name="wordValidate" title="wordValidate" type="radio" value="1"/>是</span>
+            <span><input name="wordValidate" title="wordValidate" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>开启评论验证码：</dt>
+          <dd>
+            <span><input name="commentValidate" title="commentValidate" type="radio" value="1"/>是</span>
+            <span><input name="commentValidate" title="commentValidate" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>手机版开启：</dt>
+          <dd>
+            <span><input name="phoneCtl" title="phoneCtl" type="radio" value="1"/>是</span>
+            <span><input name="phoneCtl" title="phoneCtl" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>手机版风格：</dt>
+          <dd>
+            <select title="" name="mbfg">
+              <option value="1">blog</option>
+              <option value="2" selected="selected">default</option>
+            </select>
+          </dd>
+        </dl>
+        <dl>
+          <dt class="surebtn">保存按钮：</dt>
+          <dd>
+            <a href="javascript:" class="btn btn-blue">保存</a>
+          </dd>
+        </dl>
+      </div>
+      <!--核心配置结束-->
+      <!--邮箱配置开始-->
+      <div class="itc yxpz" style="display:none;">
+        <dl>
+          <dt>发送邮箱地址：</dt>
+          <dd>
+            <input title="" type="text" value="ddend@qq.com"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>发件人名称：</dt>
+          <dd>
+            <input title="" type="text" value="站名"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>SMTP服务器：</dt>
+          <dd>
+            <input title="" type="text" value="smtp.exmail.qq.com"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>服务器端口：</dt>
+          <dd>
+            <input title="" type="text" value="25"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>邮箱账号：</dt>
+          <dd>
+            <input title="" type="text" value="ddend@qq.com"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>邮箱密码：</dt>
+          <dd>
+            <input title="" type="text" value="123zstQhz4"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt class="surebtn">保存按钮：</dt>
+          <dd>
+            <a href="javascript:" class="btn btn-blue">保存</a>
+          </dd>
+        </dl>
+      </div>
+      <!--邮箱配置结束-->
+      <!--上传配置开始-->
+      <div class="itc scpz" style="display: none;">
+        <dl>
+          <dt>允许上传大小：</dt>
+          <dd>
+            <input title="" type="text" value="2048"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>缩略图组尺寸：</dt>
+          <dd>
+            <input title="" type="text" value="300X300"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>缩略图生产方式：</dt>
+          <dd>
+            <span><input name="nailPic" title="nailPic" type="radio" value="1" checked="checked"/>原图等比例缩略</span>
+            <span><input name="nailPic" title="nailPic" type="radio" value="2"/>固定大小截取</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>固宽缩略图组长度：</dt>
+          <dd>
+            <input title="" type="text" value="600"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>上传根目录：</dt>
+          <dd>
+            <input title="" type="text" value="./uploads/"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>允许附件类型：</dt>
+          <dd>
+            <textarea title="" class="textarea-default">jpg,gif,png,jpeg,txt,doc,docx,xls,ppt,zip,rar,mp3</textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt>允许图片类型：</dt>
+          <dd>
+            <input title="" type="text" value="jpg,gif,png,jpeg"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt>隐藏下载地址：</dt>
+          <dd>
+            <span><input name="hideDlPath" title="hideDlPath" type="radio" value="1"/>是</span>
+            <span><input name="hideDlPath" title="hideDlPath" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt class="surebtn">保存按钮：</dt>
+          <dd>
+            <a href="javascript:" class="btn btn-blue">保存</a>
+          </dd>
+        </dl>
+      </div>
+      <!--上传配置结束-->
+      <!--会员配置开始-->
+      <div class="itc hypz" style="display: none;">
+        <dl>
+          <dt>开启会员功能：</dt>
+          <dd>
+            <span><input name="clubMum" title="clubMum" type="radio" value="1" checked="checked"/>是</span>
+            <span><input name="clubMum" title="clubMum" type="radio" value="2"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>开启邮箱验证：</dt>
+          <dd>
+            <span><input name="emailValidate" title="emailValidate" type="radio" value="1"/>是</span>
+            <span><input name="emailValidate" title="emailValidate" type="radio" value="2" checked="checked"/>否</span>
+          </dd>
+        </dl>
+        <dl>
+          <dt>允许附件类型：</dt>
+          <dd>
+            <textarea title=""
+                      class="textarea-default">www,bbs,ftp,mail,user,users,admin,administrator,xyhcms</textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt class="surebtn">保存按钮：</dt>
+          <dd>
+            <a href="javascript:" class="btn btn-blue">保存</a>
+          </dd>
+        </dl>
+      </div>
+      <!--会员配置结束-->
+      <!--其它配置开始-->
+      <div class="itc qtpz" style="display: none;">
+        <dl>
+          <dt>开启会员功能：</dt>
+          <dd>
+            <input title="" type="text" value="5242880"/>
+          </dd>
+        </dl>
+        <dl>
+          <dt class="surebtn">保存按钮：</dt>
+          <dd>
+            <a href="javascript:" class="btn btn-blue">保存</a>
+          </dd>
+        </dl>
+      </div>
+      <!--其它配置结束-->
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="../../plugins/jquery-3.2.1.js"></script>
+<script>
+  $(function(){
+    /*隐藏【隐藏条件】按钮*/
+    $(window.parent.document).find("#searchCtl").hide();
+    /*更改模块导航位置*/
+    $(window.parent.document).find("#position").html("系统管理&gt;系统配置");
+    /*tab标签页切换*/
+    $("#tabTitle>ul>li").click(function(){
+      $(this).addClass("beSelected").siblings().removeClass("beSelected");
+      $("#tabContent>div").hide().eq($(this).index()).show();
+    });
+  })
+</script>
+</body>
+</html>

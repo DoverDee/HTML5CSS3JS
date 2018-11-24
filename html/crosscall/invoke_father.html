@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>parents</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<script language="javascript" type="text/javascript" src="../../plugins/jquery-3.2.1.js"></script>
+<script language="javascript" type="text/javascript">
+  //供子页面调用的函数不能放在$()中，否则调用不到
+  function fatherSayhello(){
+    alert("我是父类中的方法");
+  }
+
+  //供子页面调用的变量不能放在$()中，否则调用不到
+  var fatherValue = "我是父类中变量的值。";
+
+  $(function(){
+    //定义全局变量引用子页面Window（必须放在方法内部定义，带页面加载完毕才行）
+    var $childWin = $("#main")[0].contentWindow;
+
+    $("#btn").click(function(){
+      //定义全局变量引用子页面Document（必须放在事件触发方法内部定义）
+      var $childDoc = $("#main").contents();
+
+      //获取子页面的元素
+      alert($childDoc.find("#childDiv").html());
+      //调用子页面的方法（注销的语句也可以但不建议使用）
+      // window.frames["main"].childSayHello();
+      $childWin.childSayHello();
+    });
+  });
+</script>
+<div id="fatherDiv">这是父页面里的div内容<span>测试看看获取父页面元素</span></div>
+<input id="btn" type="button" value="测试调用子页面">
+<iframe id="main" name="main" src="invoke_child.html"></iframe>
+</body>
+</html>

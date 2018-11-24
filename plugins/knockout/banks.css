@@ -1,0 +1,46 @@
+.bankList{margin-bottom: 5px;}
+.bankList ul{ padding-left:70px;}
+.bankList li{width:187px; height:37px;border: 1px solid #ADC0E1; float:left; margin:0 10px 10px 0; BACKGROUND: url(../../images/knockout/bank_logo.png) no-repeat right 100px; position:relative; cursor: pointer;}
+.bankList li:hover{border: 1px solid #FF5D5B;}
+.bankList .pf{position:absolute; top:37px; left:-1px; background-color:#FF5D5B; color:#FFF; width:189px; height:19px; font-family:"ËÎÌו"; font-size:12px; text-align:center; line-height:19px; z-index:9;display: none;}
+.bankList .bank_gs{BACKGROUND-POSITION:0 -185px}
+.bankList .bank_js{BACKGROUND-POSITION:0 -444px}
+.bankList .bank_zs{BACKGROUND-POSITION:0 -1036px}
+.bankList .bank_ny{BACKGROUND-POSITION:0 -703px}
+.bankList .bank_jt{BACKGROUND-POSITION:0 -518px}
+.bankList .bank_gf{BACKGROUND-POSITION:0 -259px}
+.bankList .bank_zg{BACKGROUND-POSITION:0 -1110px}
+.bankList .bank_ms{BACKGROUND-POSITION:0 -592px}
+.bankList .bank_pa{BACKGROUND-POSITION:0 -740px}
+.bankList .bank_xy{BACKGROUND-POSITION:0 -999px}
+.bankList .bank_zx{BACKGROUND-POSITION:0 -1184px}
+.bankList .bank_cx{BACKGROUND-POSITION:0 -1147px}
+.bankList .bank_sh{BACKGROUND-POSITION:0 -888px}
+.bankList .bank_pf{BACKGROUND-POSITION:0 -777px}
+.bankList .bank_shns{BACKGROUND-POSITION:0 -851px}
+.bankList .bank_bj{BACKGROUND-POSITION:0 -37px}
+.bankList .bank_bjns{BACKGROUND-POSITION:0 0px}
+.bankList .bank_nj{BACKGROUND-POSITION:0 -629px}
+.bankList .bank_nb{BACKGROUND-POSITION:0 -666px}
+.bankList .bank_hz{BACKGROUND-POSITION:0 -333px}
+.bankList .bank_wz{BACKGROUND-POSITION:0 -962px}
+.bankList .bank_dy{BACKGROUND-POSITION:0 -1369px}
+.bankList .bank_fz{BACKGROUND-POSITION:0 -148px}
+.bankList .bank_gd{BACKGROUND-POSITION:0 -222px}
+.clr{clear:both; height:1px; overflow:hidden;}
+.bankList .bank_more{background-color:#D7F1FE; text-align:center; line-height:37px; color:#2AA6E6; cursor: pointer;}
+.panelHide {display: none;}
+.supportCardShow {
+    position: absolute;
+    top: 37px;
+    left: -1px;
+    background-color: #FF5D5B;
+    color: #FFF;
+    width: 189px;
+    height: 19px;
+    font-family: "ËÎÌו";
+    font-size: 12px;
+    text-align: center;
+    line-height: 19px;
+    z-index: 9;
+}

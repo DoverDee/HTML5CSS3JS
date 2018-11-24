@@ -1,0 +1,60 @@
+/*登录界面样式开始*/
+body {
+  background-color: lightgrey;
+}
+
+#formBox {
+  width: 500px;
+  height: 340px;
+  background-color: #0077ca;
+  margin: 10% auto;
+  padding: 10px 20px 0;
+  color: #fff;
+}
+
+ul li {
+  margin: 20px;
+}
+
+li label {
+  display: inline-block;
+  width: 125px;
+  height: 30px;
+  text-align: right;
+  font-size: 20px;
+}
+
+#username, #password, #confirmation {
+  width: 250px;
+  height: 30px;
+  padding: 0 5px;
+}
+
+img {
+  margin-left: 125px;
+  background: #1696d7;
+  cursor: pointer;
+}
+
+#login {
+  margin-left: 125px;
+  background-color: #00497d;
+  width: 80px;
+  height: 35px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#login:hover {
+  background-color: #000099;
+}
+
+#error {
+  margin-left: 20px;
+  font-size: 14px;
+  color: red;
+}
+
+/*登录界面样式结束*/

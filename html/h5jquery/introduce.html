@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>公司介绍</title>
+  <link rel="stylesheet" href="../../css/jrs/common.css">
+  <link rel="stylesheet" href="../../css/jrs/main.css">
+  <style>
+    #fm {
+      margin: 20px 10px 0;
+    }
+
+    #fm > dl > dt {
+      float: left;
+      width: 10%;
+      font-size: 14px;
+      font-weight: bold;
+
+    }
+
+    #fm > dl > dd {
+      float: left;
+      width: 90%;
+    }
+
+    .subBtn {
+      width: 45px;
+      height: 25px;
+      background-color: #00a0e9;
+      font-size: 14px;
+      color: #FFFFFF;
+      border: 0;
+      margin: 20px 0;
+    }
+
+    .subBtn:hover {
+      background-color: #0000cc;
+    }
+  </style>
+</head>
+<body>
+<div id="introduce">
+  <form id="fm" action="#" method="get" accept-charset="UTF-8">
+    <dl>
+      <dt>摘要：</dt>
+      <dd>
+        <textarea id="absContent" title="Abstract Content" rows="5" cols="113">（使双方相识） introduce; present: 介绍对象 introduce sb.
+          to a potential marriage partner;find sb. a boy or girl friend; 作自我介绍 introduce oneself 2 （引进; 带入） recommend;
+          suggest: 介绍某人入党 recommend sb. for Party membership; 介绍新的工作方法 introduce sb. to a new method of work;</textarea>
+      </dd>
+    </dl>
+    <dl>
+      <dt>内容：</dt>
+      <dd>
+        <div id="editor" style="width:700px;height:250px;"></div>
+      </dd>
+    </dl>
+    <dl>
+      <dt style="text-indent: -38px;">提交</dt>
+      <dd>
+        <button id="submit" class="subBtn">提交</button>
+      </dd>
+    </dl>
+  </form>
+</div>
+<script type="text/javascript" src="../../plugins/jquery-3.2.1.js"></script>
+<script src="../../plugins/ueditor/ueditor.config.js"></script>
+<script charset="utf-8" src="../../plugins/ueditor/ueditor.all.min.js"></script>
+<script charset="utf-8" src="../../plugins/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script>
+  $(function(){
+    /*隐藏【隐藏条件】按钮*/
+    $(window.parent.document).find("#searchCtl").hide();
+    /*更改模块导航位置*/
+    $(window.parent.document).find("#position").html("内容管理&gt;公司介绍");
+    /*实例化编辑器*/
+    UE.getEditor('editor');
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>网站管理控制系统</title>
+  <style>
+    /* li与li之间有看不见的空白。解决办法：
+    1、可以设置浮动；
+    2、不想浮动的话在ul用font-size:0去掉空白；
+    3、像chrome不支持font-size:0的用letter-spacing:-3px这样的方式去掉li间的空白；
+    4、ul使用font-size:0 唯一的缺点就是要再次设置LI的font-size*/
+  </style>
+</head>
+<body>
+<div id="frameHead"><!--begin frameHead-->
+  FrameHead
+</div><!--end frameHead-->
+<iframe frameborder="0"></iframe><!--用于隔离#main的层级对#nav_ctl[z-index]的干扰-->
+<div id="frameContent"><!--begin frameContent-->
+</div><!--end frameContent-->
+<div id="frameFoot"><!--begin frameFoot-->
+</div><!--end frameFoot-->
+<script type="text/javascript" src="../../plugins/jquery-3.2.1.js"></script>
+<script>
+</script>
+</body>
+</html>

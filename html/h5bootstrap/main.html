@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Bootstrap练习</title>
+  <link rel="stylesheet" href="../../plugins/bootstrap3.3.7/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">-->
+  <link rel="stylesheet" href="../../css/brs/bootstrap.reset.main.css">
+</head>
+<body>
+<!--begin 导航-->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!--begin小屏幕导航和logo-->
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="portal.html" class="navbar-brand">bs&Reset bs.css for main</a>
+    </div>
+    <!--end 小屏幕导航和logo-->
+    <div class="navbar-collapse collapse">
+      <ul id="firstMenu" class="nav navbar-nav">
+        <li class="active"><a href="javascript:"><span class="glyphicon glyphicon-home"></span>系统首页</a></li>
+        <li><a href="javascript:"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+        <li><a href="javascript:"><span class="glyphicon glyphicon-list-alt"></span>内容管理</a></li>
+        <li><a href="javascript:"><span class="glyphicon glyphicon-tags"></span>标签管理</a></li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li class="dropdown">
+          <a id="dLabel" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            DoverLee<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li><a href="javascript:"><span class="glyphicon glyphicon-th-large"></span>主页</a></li>
+            <li><a href="javascript:"><span class="glyphicon glyphicon-cog"></span>个人设置</a></li>
+            <li><a href="javascript:"><span class="glyphicon glyphicon-modal-window"></span>账户中心</a></li>
+            <li><a href="javascript:"><span class="glyphicon glyphicon-paperclip"></span>我的收藏</a></li>
+          </ul>
+        </li>
+        <li><a href="javascript:"><span class="glyphicon glyphicon-log-out"></span>退出</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--end 导航-->
+<div id="firstMenuCnt">
+  <section id="systemMain" style="display: block;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="alert alert-danger alert-dismissible fade in" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">×</span>
+            </button>
+            <h4>Oh snap! You got an error!</h4>
+            <p>Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+              lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p>
+              <button type="button" class="btn btn-danger">Take this action</button>
+              <button type="button" class="btn btn-default" data-dismiss="alert">Close</button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel table</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table">
+                <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel title</h3>
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt"></span>
+                &nbsp;<a href="#">Cras justo odio</a>
+                <apan class="pull-right">2018-05-21</apan>
+              </li>
+              <li class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt"></span>
+                &nbsp;<a href="#">Dapibus ac facilisis in</a>
+                <apan class="pull-right">2018-05-21</apan>
+              </li>
+              <li class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt"></span>
+                &nbsp;<a href="#">Morbi leo risus</a>
+                <apan class="pull-right">2018-05-21</apan>
+              </li>
+              <li class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt"></span>
+                &nbsp;<a href="#">Porta ac consectetur ac</a>
+                <apan class="pull-right">2018-05-21</apan>
+              </li>
+              <li class="list-group-item">
+                <span class="glyphicon glyphicon-list-alt"></span>
+                &nbsp;<a href="#">Vestibulum at eros</a>
+                <apan class="pull-right">2018-05-21</apan>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel Chart</h3>
+            </div>
+            <div class="panel-body">
+              <canvas id="canvas"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Panel progress</h3>
+            </div>
+            <div class="panel-body">
+              <p>硬盘使用率：40%</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar"
+                     aria-valuenow="40"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                  <span class="sr-only">40% Complete (success)</span>
+                </div>
+              </div>
+              <p>内存使用率：20%</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="20"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                  <span class="sr-only">20% Complete</span>
+                </div>
+              </div>
+              <p>数据库使用率：60%</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar"
+                     aria-valuenow="60"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  <span class="sr-only">60% Complete (warning)</span>
+                </div>
+              </div>
+              <p>CPU使用率：80%</p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="80"
+                     aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                  <span class="sr-only">80% Complete (danger)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">留言板</h3>
+            </div>
+            <div class="panel-body">
+              <div class="col-md-7">
+                <div class="media well">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../images/android.png" alt="android">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">android say hello</h4>
+                  </div>
+                </div>
+                <div class="media well">
+                  <div class="media-body">
+                    <h4 class="media-heading pull-right">apple say hi</h4>
+                  </div>
+                  <div class="media-right">
+                    <a href="#">
+                      <img class="media-object" src="../../images/apple.png" alt="apple">
+                    </a>
+                  </div>
+                </div>
+                <div class="media well">
+                  <div class="media-left">
+                    <a href="#">
+                      <img class="media-object" src="../../images/android.png" alt="android">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">android say 您好！</h4>
+                  </div>
+                </div>
+                <div class="media well">
+                  <div class="media-body">
+                    <h4 class="media-heading pull-right">apple say 好久不见!</h4>
+                  </div>
+                  <div class="media-right">
+                    <a href="#">
+                      <img class="media-object" src="../../images/apple.png" alt="apple">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <form>
+                  <div class="form-group">
+                    <label for="say">输入留言内容</label>
+                    <textarea class="form-control" id="say" placeholder="say"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <div class="panel panel-default">
+                  <div class="panel-heading">联系手册</div>
+                  <ul class="list-group">
+                    <li class="list-group-item">Cras:<span class="glyphicon glyphicon-phone"></span>13764987654</li>
+                    <li class="list-group-item">Dapibus:<span class="glyphicon glyphicon-phone"></span>13764987654</li>
+                    <li class="list-group-item">Morbi:<span class="glyphicon glyphicon-phone"></span>13764987654</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="userMng" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="secondMenu col-md-2">
+          <ul class="list-group">
+            <li class="list-group-item active">用户管理</li>
+            <li class="list-group-item">用户搜索</li>
+            <li class="list-group-item" data-toggle="modal" data-target="#myModal">用户添加</li>
+          </ul>
+        </div>
+        <div class="secondMenuCnt col-md-10">
+          <div class="menuNav page-header"><h5>用户管理</h5></div>
+          <div class="menuCnt">
+            <section style="display: block;">
+              <table class="table table-hover">
+                <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <nav class="pull-right" aria-label="Page navigation">
+                <ul class="pagination">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </section>
+            <section style="display: none;">
+              <form action="#">
+                <div class="alert alert-info">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                      aria-hidden="true">×</span>
+                  </button>
+                  <strong>提示：</strong>支持模糊查询。
+                </div>
+                <div class="form-group">
+                  <label>用户名：</label>
+                  <input class="form-control" type="text" placeholder="name"/>
+                </div>
+                <div class="form-group">
+                  <label>UID：</label>
+                  <input class="form-control" type="text" placeholder="UID"/>
+                </div>
+                <div class="form-group">
+                  <label>用户组：</label>
+                  <select class="form-control" type="text" placeholder="group">
+                    <option value="0">管理员</option>
+                    <option value="1">安全员</option>
+                    <option value="2">会员</option>
+                  </select>
+                </div>
+                <button type="submit" class="btn btn-default">提交</button>
+              </form>
+            </section>
+            <section style="display: none;" `>
+              Add user dialog!
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contMng" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="secondMenu col-md-2">
+          <ul class="list-group">
+            <li class="list-group-item active">内容管理</li>
+            <li class="list-group-item">添加内容</li>
+          </ul>
+        </div>
+        <div class="secondMenuCnt col-md-10">
+          <div class="menuNav page-header"><h5>内容管理</h5></div>
+          <div class="menuCnt">
+            <section style="display: block;">
+              <table class="table table-striped">
+                <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li class="dropdown-item"><a href="#">Action</a></li>
+                        <li class="dropdown-item"><a href="#">Another action</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="dropdown-item"><a href="#">Something else here</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <nav class="pull-right" aria-label="Page navigation">
+                <ul class="pagination">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </section>
+            <section style="display: none;">
+              <form action="#">
+                <div class="form-group">
+                  <label>标题：</label>
+                  <input class="form-control" type="text" placeholder="title"/>
+                </div>
+                <div class="form-group">
+                  <label>内容：</label>
+                  <textarea class="form-control" rows="15" cols="10" placeholder="input content..."></textarea>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox"/>全局置顶</label>
+                  <button type="submit" class="btn btn-default btn-sm pull-right">提交</button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="tagMng" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="page-header"><h5>标签管理</h5></div>
+          <div class="col-md-12">
+            <form action="#" class="tagForm">
+              <div class="col-md-10">
+                <input id="tagVal" type="text" class="form-control" placeholder="请输入标签...">
+              </div>
+              <div class="col-md-2">
+                <button id="addTag" type="submit" class="btn btn-default">添加</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-12 tagCnt">
+            <div class="alert alert-info alert-dismissible pull-left" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+              </button>
+              <strong>HEHE</strong>
+            </div>
+            <div class="alert alert-info alert-dismissible pull-left" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+              </button>
+              <strong>HAHA!</strong>
+            </div>
+            <div class="alert alert-info alert-dismissible pull-left" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+              </button>
+              <strong>OHOH!</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="form-group">
+            <label>用户名：</label>
+            <input type="text" class="form-control" placeholder="用户名">
+          </div>
+          <div class="form-group">
+            <label>密码：</label>
+            <input type="password" class="form-control" placeholder="密码">
+          </div>
+          <div class="form-group">
+            <label>确认密码：</label>
+            <input type="password" class="form-control" placeholder="确认密码">
+          </div>
+          <div class="form-group">
+            <label>邮箱：</label>
+            <input type="password" class="form-control" placeholder="邮箱">
+          </div>
+          <div class="form-group">
+            <label>所属用户组：</label>
+            <select class="form-control">
+              <option value="0">新手</option>
+              <option value="1">会员</option>
+              <option value="2">管理员</option>
+              <option value="3">VIP</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <P>Copyright&nbsp;&nbsp;&copy;&nbsp;&nbsp;2018-2020&nbsp;&nbsp;www.dl.com ICP be defined by self.</P>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../../plugins/jquery-3.2.1.js"></script>
+<script src="../../plugins/bootstrap3.3.7/js/bootstrap.min.js"></script>
+<script src="../../plugins/Chart/Chart.bundle.js"></script>
+<script src="../../plugins/Chart/Chart.js"></script>
+<script>
+  $(function(){
+    var ctx = document.getElementById("canvas").getContext('2d');
+    $("#firstMenu>li").click(function(){
+      var $this = $(this);
+      $this.addClass("active").siblings().removeClass("active");
+      $("#firstMenuCnt>section").eq($this.index()).css("display", "block").siblings().css("display", "none");
+    });
+    $(".secondMenu>ul>li").click(function(){
+      var $this = $(this);
+      if($this.index() < 2){
+        $this.addClass("active").siblings().removeClass("active");
+        var $cnt = $this.parents(".secondMenu").siblings(".secondMenuCnt");
+        $cnt.find(".menuNav>h5").text($this.text());
+        $cnt.find(".menuCnt>section").eq($this.index()).css("display", "block").siblings().css("display", "none");
+      }
+    });
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+          label: '# of one',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 3
+        }, {
+          label: '# of two',
+          data: [2, 8, 13, 5, 12, 7],
+          backgroundColor: [
+            'rgba(255, 159, 4, 0.2)'
+          ],
+          borderColor: [
+            'rgba(25, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        }
+      }
+    });
+    $("#addTag").click(function(){
+      var tagHtml = "<div class=\"alert alert-info alert-dismissible pull-left\" role=\"alert\">";
+      tagHtml += "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span>";
+      tagHtml += "</button><strong>";
+      tagHtml += $("#tagVal").val();
+      tagHtml += "</strong></div>";
+      $(".tagCnt").append(tagHtml);
+      $("#tagVal").val("");
+    });
+  });
+</script>
+</body>
+</html>

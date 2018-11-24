@@ -1,0 +1,390 @@
+/*公共样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+html::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    background-color: #f3f3f3;
+    font-family: "Microsoft YaHei";
+}
+
+.wapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.sectiontop {
+    margin-top: 20px;
+}
+
+.title {
+    background-image: url("../images/html5/title_bg.jpg");
+    height: 45px;
+    line-height: 45px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.title h1 a {
+    color: #444444;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*头部样式*/
+#logo, #form {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#form {
+    margin-left: 140px;
+}
+
+#form input {
+    font-family: "微软雅黑";
+    font-size: 20px;
+}
+
+#form input[type="text"] {
+    width: 250px;
+    height: 40px;
+    background-color: #f3f3f3;
+    border: solid 1px #ccc;
+    padding-left: 5px;
+}
+
+#form input[type="submit"] {
+    background-color: #3598db;
+    border: 0px;
+    width: 48px;
+    height: 44px;
+}
+
+#nav {
+    background-color: #3598db;
+    height: 60px;
+}
+
+#nav li {
+    display: inline-block;
+    line-height: 60px;
+    font-size: 25px;
+    padding: 0 10px;
+    border-right: solid 1px #2f89c5;
+    font-size: 21px;
+}
+
+#nav li:last-child {
+    border-right: 0px;
+}
+
+#nav li:hover {
+    background-color: #2f89c5;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+/*中部样式*/
+#left, #right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#left {
+    width: 628px;
+    margin: 20px 20px 0 0;
+}
+
+#right {
+    width: 352px;
+    height: 20px;
+}
+
+/*轮播图*/
+section#dynpics {
+    box-shadow: 10px 4px 15px #A39F9F;
+}
+
+/*新闻*/
+section#news li {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: 5px;
+}
+
+section#news li:last-child {
+    margin-bottom: 0;
+}
+
+section#news li img {
+    width: 315px;
+    height: 165px;
+}
+
+section#news li a {
+    width: 308px;
+    height: 165px;
+    background-color: #3598db;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    padding: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+section#news li a h2 {
+    font-size: 18px;
+    border-bottom: solid 1px #fff;
+    padding-bottom: 5px;
+    margin: 10px 0;
+}
+
+section#news li a p {
+    font-size: 16px;
+    text-indent: 32px;
+}
+
+section#news li a div.triangle {
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    position: absolute;
+    top: 20px;
+    left: -16px;
+    transform-origin: bottom left;
+    -webkit-transform: rotate(45deg);
+    -noz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*活动*/
+#activepic li {
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+#activepic li:first-child {
+    margin-left: 0;
+}
+
+#activepic li:last-child {
+    margin-right: 0;
+}
+
+#activepic li img {
+    width: 149px;
+    height: 140px;
+}
+
+.ollistnews {
+    width: 469px;
+    display: inline-block;
+    margin-top: 0;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.ollistnews li {
+    counter-increment: listxh;
+    display: inline-block;
+    vertical-align: top;
+    width: 470px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 6px 0;
+}
+
+.ollistnews li:before {
+    content: counter(listxh);
+    background: #444;
+    padding: 2px 5px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.ollistnews li:nth-child(-n+3):before {
+    background: #2f89c5;
+}
+
+.ollistnews li:nth-child(n+10):before {
+    padding: 2px;
+    font-size: 14px;
+}
+
+.ollistnews li a {
+    text-decoration: none;
+    color: #444;
+}
+
+.ollistnews li:hover {
+    text-shadow: 1px 2px 5px #000;
+    -webkit-transition: text-shadow 0.5s linear;
+    -moz-transition: text-shadow 0.5s linear;
+    -ms-transition: text-shadow 0.5s linear;
+    -o-transition: text-shadow 0.5s linear;
+    transition: text-shadow 0.5s linear;
+}
+
+#activities aside {
+    width: 145px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#activities aside li {
+    display: inline-block;
+}
+
+#activities aside li img {
+    width: 149px;
+}
+
+/*精彩博文*/
+#blogpic li {
+    display: inline-block;
+    margin: 5px 0;
+    width: 172px;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+#blogpic li:first-child {
+    margin-right: 8px;
+}
+
+#blognewslist li {
+    width: 352px;
+}
+
+/*职位信息*/
+#jobsnewslist li {
+    width: 352px;
+}
+
+#jobs .title {
+    margin-top: 10px;
+}
+
+/*联系我们*/
+#connection img {
+    width: 100%;
+}
+
+/*集团子公司*/
+#subColist li {
+    display: inline-block;
+    width: 100%;
+}
+
+#subColist li h2 a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #444;
+}
+
+#subColist li div.subCoDesc {
+    border: solid 1px #f3f3f3;
+    width: 352px;
+    height: 50px;
+}
+
+#subColist li div.subCoDesc:hover {
+    -webkit-transition: padding 0.5s linear;
+    -moz-transition: padding 0.5s linear;
+    -ms-transition: padding 0.5s linear;
+    -o-transition: padding 0.5s linear;
+    transition: padding 0.5s linear;
+    border: solid 1px #3598db;
+    padding: 10px 0;
+}
+
+#subColist li div.subCoDesc p a {
+    text-decoration: none;
+    color: #444;
+}
+
+#subColist li div.subCoDesc img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 170px;
+}
+
+#subColist li div.subCoDesc p {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-indent: 20px;
+    width: 175px;
+    height: 50px;
+    font-size: 8px;
+    overflow: hidden;
+}
+
+#subColist li div.subCoDesc p:after {
+    content: "...";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 0px 20px;
+    background: url(../images/html5/ellipsis_bg.png) repeat-y;
+}
+
+/*脚部样式*/
+#footer {
+    background-color: #3598db;
+    margin-top: 20px;
+    color: #fff;
+}
+
+#footer footer {
+    padding: 40px 0;
+    text-align: center;
+}
+
+#footer li {
+    display: inline-block;
+    padding: 0 20px;
+    border-right: solid 1px #ccc;
+}
+
+#footer li:first-child {
+    padding-left: 0;
+}
+
+#footer li:last-child {
+    padding-right: 0;
+    border-right: 0;
+}
+
+#footer li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#footer footer p {
+    margin-top: 5px;
+}

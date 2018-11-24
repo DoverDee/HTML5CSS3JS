@@ -1,0 +1,42 @@
+body{
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+.progress{
+  margin-bottom: 15px;
+}
+
+.nav span{
+  margin-right: 5px;
+}
+
+.media{
+  padding: 10px;
+}
+
+.media img{
+  width: 40px;
+  height: 40px;
+}
+
+.media h4{
+  line-height: 40px;
+}
+
+.page-header{
+  padding-bottom:0;
+  margin: 0;
+}
+.tagForm{
+  margin-top: 10px;
+}
+.tagCnt{
+  margin: 10px;
+}
+.tagCnt>.alert{
+  margin: 5px;
+}
+footer{
+  text-align: center;
+  margin: 20px;
+}

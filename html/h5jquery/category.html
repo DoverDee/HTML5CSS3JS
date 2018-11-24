@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="UTF-8">
+  <title>栏目管理</title>
+  <link rel="stylesheet" href="../../css/jrs/common.css">
+  <link rel="stylesheet" href="../../css/jrs/main.css">
+  <style>
+    #searchWrapper {
+      height: 80px;
+      padding: 0 10px;
+      border: 1px solid #ADC0E1;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      font-size: larger;
+      font-weight: bolder;
+      background-color: #f3f3f3;
+    }
+
+    #condition {
+      margin: 5px 0;
+    }
+
+    #condition > input {
+      width: 140px;
+      height: 25px;
+      margin: 0 10px;
+      border: 1px solid #CCC3B3;
+      background-color: #E3DCCE;
+      border-radius: 5px;
+    }
+
+    #commit {
+      margin: 5px 0;
+    }
+
+    #commit > input {
+      width: 60px;
+      height: 25px;
+      border: 1px solid #2AA6E6;
+      background-color: #2AA6E6;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    #commit > input:hover {
+      color: #ffffff;
+      background-color: #62d2f9;
+      cursor: pointer;
+    }
+
+    #tableList {
+      margin: 10px;
+    }
+
+    #tableList > table {
+      width: 100%;
+      text-align: center;
+      border-top: 1px solid #cccccc;
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+    }
+
+    #tableList > table th, #tableList > table td {
+      height: 36px;
+      line-height: 36px;
+      border-bottom: 1px solid #cccccc;
+    }
+
+    #tableList > table th {
+      color: #000000;
+      font-size: 14px;
+      font-weight: bold;
+      background-color: #9C9C9C;
+    }
+
+    #tableList > table tr:hover {
+      background-color: #cccccc;
+    }
+  </style>
+</head>
+<body>
+<div id="category">
+  <div id="searchWrapper">
+    <div id="condition" class="left">
+      <label for="tp">类型：</label><input id="tp" name="tp" type="text" placeholder="请选择类型"/>
+      <label for="nm">名称：</label><input id="nm" name="nm" type="text" placeholder="请输名称"/>
+      <label for="cd">代码：</label><input id="cd" name="cd" type="text" placeholder="请输代码"/>
+      <label for="nb">代码：</label><input id="nb" name="nb" type="number" placeholder="请输数量"/>
+    </div>
+    <div id="commit" class="right clear">
+      <input id="search" type="button" value="查询"/>
+    </div>
+  </div>
+  <div id="contentWrapper">
+    <div id="tableList">
+      <table>
+        <thead>
+        <tr>
+          <th><input id="selectAll" type="checkbox" title="选择框"/></th>
+          <th>编号</th>
+          <th>名称</th>
+          <th>所属类型</th>
+          <th>显示</th>
+          <th>排序</th>
+          <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><input type="checkbox" title="选择框"/></td>
+          <td>1</td>
+          <td><a href="javascript:">公司介绍</a></td>
+          <td>单页模型</td>
+          <td>是</td>
+          <td><input type="text" value="1" title="排序"/></td>
+          <td>
+            <a href="javascript:">添加子栏目</a>
+            <a href="javascript:">列表</a>
+            <a href="javascript:">修改</a>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" title="选择框"/></td>
+          <td>2</td>
+          <td><a href="javascript:">公司介绍</a></td>
+          <td>单页模型</td>
+          <td>是</td>
+          <td><input type="text" value="2" title="排序"/></td>
+          <td>
+            <a href="javascript:">添加子栏目</a>
+            <a href="javascript:">列表</a>
+            <a href="javascript:">修改</a>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" title="选择框"/></td>
+          <td>3</td>
+          <td><a href="javascript:">公司介绍</a></td>
+          <td>单页模型</td>
+          <td>是</td>
+          <td><input type="text" value="4" title="排序"/></td>
+          <td>
+            <a href="javascript:">添加子栏目</a>
+            <a href="javascript:">列表</a>
+            <a href="javascript:">修改</a>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" title="选择框"/></td>
+          <td>4</td>
+          <td><a href="javascript:">公司介绍</a></td>
+          <td>单页模型</td>
+          <td>是</td>
+          <td><input type="text" value="3" title="排序"/></td>
+          <td>
+            <a href="javascript:">添加子栏目</a>
+            <a href="javascript:">列表</a>
+            <a href="javascript:">修改</a>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" title="选择框"/></td>
+          <td>5</td>
+          <td><a href="javascript:">公司介绍</a></td>
+          <td>单页模型</td>
+          <td>是</td>
+          <td><input type="text" value="5" title="排序"/></td>
+          <td>
+            <a href="javascript:">添加子栏目</a>
+            <a href="javascript:">列表</a>
+            <a href="javascript:">修改</a>
+            <a href="javascript:">删除</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="page"></div>
+  </div>
+</div>
+<script type="text/javascript" src="../../plugins/jquery-3.2.1.js"></script>
+<script>
+  $(function(){
+    /*显示【隐藏条件】按钮*/
+    $(window.parent.document).find("#searchCtl").show();
+    /*更改模块导航位置*/
+    $(window.parent.document).find("#position").html("栏目管理&gt;栏目管理");
+
+    $("#search").click(function(){
+      // var _nb = $("#nb").valueOf().val();
+      // alert(_nb);
+      var _text = $(window.parent.document).find("#searchCtl").text();
+      alert(_text);
+
+
+    });
+    $("#selectAll").click(function(){
+      if($(this).prop("checked")){
+        $("#tableList :checkbox").prop("checked", true);
+      }else{
+        $("#tableList :checkbox").prop("checked", false);
+      }
+    });
+  });
+</script>
+</body>
+</html>
